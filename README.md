@@ -69,4 +69,27 @@ The **Streamlit-based UI** (`mental_health_ui.py`) enables users to:
 
 ---
 
-## 🗂️ Project Structure  
+## 🗂️ Project Structure and Setup Instructions
+
+```bash
+📂 Self_Analysis_Mental_Health_Model
+ ├── 📂 Basic UI               # UI and frontend scripts
+ ├── 📂 Data                   # Dataset and related files
+ ├── 📂 Inference Script       # Command-line prediction script
+ ├── 📂 Models                 # Pre-trained models
+ ├── 📂 Video Demonstration    # Video explanations
+ ├── 📂 src                    # Data processing and model training scripts
+ └── README.md                 # Project documentation
+
+# Setup Instructions
+
+1️⃣ Clone the Repository:  
+    git clone https://github.com/KanikaGupta-22978/Self_Analysis-Mental-Health-Model.git  
+    cd Self_Analysis-Mental-Health-Model  
+
+2️⃣ Create a Virtual Environment:  
+    python -m venv env  
+    source env/bin/activate  # On Windows use `env\Scripts\activate`  
+
+3️⃣ Install Dependencies:  
+    pip install -r requirements.txt  
