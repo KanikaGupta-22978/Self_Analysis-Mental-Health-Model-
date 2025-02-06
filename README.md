@@ -92,4 +92,68 @@ The **Streamlit-based UI** (`mental_health_ui.py`) enables users to:
     source env/bin/activate  # On Windows use `env\Scripts\activate`  
 
 3️⃣ Install Dependencies:  
-    pip install -r requirements.txt  
+    pip install -r requirements.txt -
+numpy==1.21.6
+pandas==1.3.5
+scikit-learn==1.0.2
+shap==0.41.0
+streamlit==1.10.0
+joblib==1.1.0
+matplotlib==3.5.1
+seaborn==0.11.2
+
+
+# 🚀 Running the Project  
+
+## 📌 1. Model Training  
+Run the training script to preprocess data, train models, evaluate them, and save the best model.  
+This step also generates a **SHAP explanation** for a sample input.
+
+### 🔧 Data Preparation  
+By default, the project uses a dummy dataset defined in `src/data_preprocessing.py`.  
+To use your own dataset:  
+1. Place your CSV file in the project.  
+2. Modify the `load_data` function in `src/data_preprocessing.py` to load from your CSV.
+
+### 🛠️ Training the Model  
+Run the following command to train the model:  
+
+python src/train_model.py
+
+📊 2. Inference via Command-Line
+Use the inference script to enter symptoms and get a prediction along with a SHAP explanation (saved as shap_explanation.html):
+
+bash
+Copy
+Edit
+python src/predict_mental_health.py
+
+🌐 3. Interactive UI (Streamlit)
+Launch the basic UI to interactively input symptoms, view predictions, and see an embedded SHAP explanation:
+
+bash
+Copy
+Edit
+streamlit run mental_health_ui.py
+
+📖 Usage Instructions
+🖥️ Command-Line Interface
+Run the inference script and follow the on-screen prompts.
+The model outputs:
+Predicted mental health condition
+Prediction probabilities
+The SHAP explanation is saved as an HTML file (shap_explanation.html).
+
+🌍 Web UI (Streamlit)
+Run the Streamlit UI using the command above.
+Input your symptoms in the text area.
+Click the "Predict" button.
+View:
+The predicted mental health condition
+Associated probabilities
+Interactive SHAP explanation displayed inline
+✨ Tip: The Streamlit interface offers a more user-friendly experience for testing predictions and visualizing results in real time!
+
+
+
+
