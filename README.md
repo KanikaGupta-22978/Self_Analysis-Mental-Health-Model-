@@ -1,6 +1,6 @@
 # Self-Analysis Mental Health Predictor  
-**Welcome to the Arogo AI project!**  
-This project is part of the AI/ML Engineer Intern Assignment and focuses on developing a self-analysis mental health model that predicts possible mental health conditions based on user-provided symptoms. The model emphasizes **accuracy**, **interpretability (using SHAP)**, and **efficiency**, and is designed for seamless integration into chatbots or applications.
+
+Welcome to the **Self-Analysis Mental Health Predictor** project! This project is designed to predict possible mental health conditions based on user-provided symptoms. The model emphasizes **accuracy**, **efficiency**, and **interpretability** using SHAP (SHapley Additive exPlanations). It is built to be easily integrated into chatbots or standalone applications for personal mental health assessments.
 
 ---
 
@@ -12,32 +12,28 @@ This project is part of the AI/ML Engineer Intern Assignment and focuses on deve
 - [Project Structure](#project-structure)  
 - [Setup Instructions](#setup-instructions)  
 - [Usage Instructions](#usage-instructions)  
-- [Kaggle Dataset](#kaggle-dataset)  
 - [Additional Notes](#additional-notes)  
 
 ---
 
 ## 📌 Project Overview  
-The **Self-Analysis Mental Health Predictor** leverages machine learning to analyze user-reported symptoms and predict potential mental health conditions. Key components include:  
+The **Self-Analysis Mental Health Predictor** leverages machine learning to analyze symptoms and predict potential mental health conditions.  
 
-1. **Data Preparation**: Cleaning, preprocessing, feature engineering, and exploratory analysis.  
-2. **Model Development**:  
-   - Training & evaluating multiple models (e.g., Logistic Regression, Random Forest)  
-   - Using metrics such as Accuracy, Precision, Recall, F1-score, and ROC-AUC  
-   - SHAP for model interpretability.  
-3. **Inference & UI**:  
-   - **Command-line script** (`predict_mental_health.py`) to generate predictions and SHAP explanations saved as interactive HTML.  
-   - **Streamlit Web UI** (`mental_health_ui.py`) for interactive testing.  
+### Key Components:  
+- **Data Preparation**: Cleaning, preprocessing, feature engineering, and exploratory analysis.  
+- **Model Development**: Training multiple models and selecting the best-performing one based on evaluation metrics like accuracy, precision, recall, F1-score, and ROC-AUC.  
+- **SHAP for Interpretability**: Providing explanations for model predictions using interactive SHAP plots.  
+- **UI for Inference**:  
+  - **Command-line tool** for terminal-based predictions and SHAP explanations.  
+  - **Streamlit-based Web UI** for a more interactive experience.  
 
 ---
 
 ## 📊 Data Preparation  
-The dataset is curated from publicly available mental health datasets. For this project, we are using the dataset from Kaggle:  
+The dataset used in this project is curated from publicly available mental health datasets on **Kaggle**.  
 
-**[Mental Health Symptoms Dataset](https://www.kaggle.com/)**  
-
-### Data Preprocessing Includes:  
-- Cleaning and normalization  
+### Data Preprocessing Steps:  
+- Data cleaning and normalization  
 - Handling missing values  
 - Exploratory Data Analysis (EDA)  
 - Feature engineering and selection  
@@ -45,27 +41,31 @@ The dataset is curated from publicly available mental health datasets. For this 
 ---
 
 ## 🔧 Model Development  
-We trained multiple models for multi-class classification of mental health conditions. The evaluation metrics include:  
+We trained and evaluated multiple models, including:  
+- **Logistic Regression**  
+- **Random Forest Classifier**  
+
+### Evaluation Metrics:  
 - **Accuracy**  
 - **Precision**  
 - **Recall**  
 - **F1-score**  
 - **ROC-AUC**  
 
-The best performing model is selected (saved as `models/best_model.pkl`) and was interpreted using **SHAP** to provide interactive explanations.
+The best model is saved as `models/best_model.pkl` and interpreted using **SHAP** for better understanding of predictions.
 
 ---
 
 ## 🔮 Inference and UI  
 
 ### 🖥️ Command-Line Inference  
-Use the `predict_mental_health.py` script to input symptoms via the terminal and obtain predictions along with a SHAP explanation saved as an HTML file.  
+The command-line tool (`predict_mental_health.py`) allows users to enter symptoms and receive a prediction along with a SHAP explanation saved as an HTML file.  
 
 ### 🌐 Web UI (Streamlit)  
-A basic UI built with **Streamlit** (`mental_health_ui.py`) allows users to:  
+The **Streamlit-based UI** (`mental_health_ui.py`) enables users to:  
 - Input their symptoms  
-- View the predicted mental health condition and associated probabilities  
-- See an interactive **SHAP force plot** explanation embedded directly into the UI  
+- View the predicted mental health condition  
+- See an interactive **SHAP force plot** explanation  
 
 ---
 
